@@ -35,7 +35,7 @@ class SmurfPostForm extends Component {
     return (
       <div>
         <form onSubmit={this.submitHandler}>
-          <div>
+          <div className="ui left icon right labeled input">
             <input
               type="text"
               name="name"
@@ -43,8 +43,10 @@ class SmurfPostForm extends Component {
               placeholder="Name your smurf"
               onChange={this.changeHandler}
             />
+            <i aria-hidden="true" class="add circle icon"></i>
+            <div class="ui tag label label">Add Smurf</div>
           </div>
-          <div>
+          <div className="ui left icon right labeled input">
             <input
               type="text"
               name="age"
@@ -52,8 +54,10 @@ class SmurfPostForm extends Component {
               placeholder="Smurf that age"
               onChange={this.changeHandler}
             />
+            <i aria-hidden="true" class="adn icon"></i>
+            <div class="ui tag label label">Add Age</div>
           </div>
-          <div>
+          <div className="ui left icon right labeled input">
             <input
               type="text"
               name="height"
@@ -61,6 +65,8 @@ class SmurfPostForm extends Component {
               placeholder="Smurf's height"
               onChange={this.changeHandler}
             />
+            <i aria-hidden="true" class="arrows alternate vertical icon"></i>
+            <div class="ui tag label label">Smurf Height</div>
           </div>
 
           <button type="submit" class="ui red inverted button">

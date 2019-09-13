@@ -6,9 +6,8 @@ import SmurfList from './SmurfList';
 const App = () => {
   return (
     <div className="App">
-      <h1>Hello World</h1>
-      <div>Welcome to your state management version of Smurfs!</div>
-      <div>Start inside of your `src/index.js` file!</div>
+      <h1> Smurf-Tastic!!</h1>
+
       <SmurfList />
       <SmurfPostForm />
     </div>
