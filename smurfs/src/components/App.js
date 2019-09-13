@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import { getSmurf } from './action';
+import SmurfPostForm from './SmurfPostForm';
 
 const App = ({ state, getSmurf }) => {
   return (
@@ -12,6 +13,7 @@ const App = ({ state, getSmurf }) => {
       <div>
         <button onClick={() => getSmurf()}>Get Your Smurf</button>
       </div>
+      <SmurfPostForm />
     </div>
   );
 };
