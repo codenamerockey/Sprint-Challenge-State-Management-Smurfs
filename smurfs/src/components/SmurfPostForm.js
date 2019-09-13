@@ -34,6 +34,7 @@ class SmurfPostForm extends Component {
     const { name, age, height } = this.state;
     return (
       <div>
+        <h1 className="heading">Add your Smurf</h1>
         <form onSubmit={this.submitHandler}>
           <div className="ui left icon right labeled input">
             <input
@@ -43,8 +44,8 @@ class SmurfPostForm extends Component {
               placeholder="Name your smurf"
               onChange={this.changeHandler}
             />
-            <i aria-hidden="true" class="add circle icon"></i>
-            <div class="ui tag label label">Add Smurf</div>
+            <i aria-hidden="true" className="add circle icon"></i>
+            <div className="ui tag label label">Add Smurf</div>
           </div>
           <div className="ui left icon right labeled input">
             <input
@@ -54,8 +55,8 @@ class SmurfPostForm extends Component {
               placeholder="Smurf that age"
               onChange={this.changeHandler}
             />
-            <i aria-hidden="true" class="adn icon"></i>
-            <div class="ui tag label label">Add Age</div>
+            <i aria-hidden="true" className="adn icon"></i>
+            <div className="ui tag label label">Add Age</div>
           </div>
           <div className="ui left icon right labeled input">
             <input
@@ -65,11 +66,14 @@ class SmurfPostForm extends Component {
               placeholder="Smurf's height"
               onChange={this.changeHandler}
             />
-            <i aria-hidden="true" class="arrows alternate vertical icon"></i>
-            <div class="ui tag label label">Smurf Height</div>
+            <i
+              aria-hidden="true"
+              className="arrows alternate vertical icon"
+            ></i>
+            <div className="ui tag label label">Smurf Height</div>
           </div>
 
-          <button type="submit" class="ui red inverted button">
+          <button type="submit" className="ui red inverted button">
             Submit
           </button>
         </form>

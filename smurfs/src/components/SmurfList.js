@@ -13,7 +13,7 @@ const SmurfList = ({ state, getSmurf }) => {
         })}
       </div>
 
-      <button onClick={() => getSmurf()} class="ui blue inverted button">
+      <button onClick={() => getSmurf()} className="ui blue inverted button">
         Get Your Smurf
       </button>
     </div>

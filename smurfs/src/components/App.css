@@ -43,27 +43,34 @@ form {
 }
 
 body {
-  color: white;
+  color: tomato;
+  text-shadow: 2px 2px 0px white, 2px 2px 0px #888;
 
 }
 
 #root {
-  background-color: aquamarine;
+  background-image: url('https://d2z8nyy70yf33i.cloudfront.net/wp-content/uploads/smurfs_0023_Zrzut-ekranu-2017-03-29-o-10.03.25-1400x788.png');
   background-size: cover;
 }
 
 #root>div>div:nth-child(4)>button {
   /* Get your Smurf Button */
   margin: 10px;
+
 }
 
 #root>div>div:nth-child(5)>form>button {
   /* form button */
   margin: 15px;
+
 }
 
 #root>div>div:nth-child(3)>form>div:nth-child(3),
 #root>div>div:nth-child(3)>form>div:nth-child(1),
 #root>div>div:nth-child(3)>form>div:nth-child(2) {
   margin: 10px;
+}
+
+#root>div>div:nth-child(3)>h1 {
+  margin-top: 20px;
 }
