@@ -40,6 +40,7 @@ class SmurfPostForm extends Component {
               type="text"
               name="name"
               value={name}
+              placeholder="Name your smurf"
               onChange={this.changeHandler}
             />
           </div>
@@ -48,6 +49,7 @@ class SmurfPostForm extends Component {
               type="text"
               name="age"
               value={age}
+              placeholder="Smurf that age"
               onChange={this.changeHandler}
             />
           </div>
@@ -56,10 +58,14 @@ class SmurfPostForm extends Component {
               type="text"
               name="height"
               value={height}
+              placeholder="Smurf's height"
               onChange={this.changeHandler}
             />
           </div>
-          <button type="submit">Submit</button>
+
+          <button type="submit" class="ui red inverted button">
+            Submit
+          </button>
         </form>
       </div>
     );

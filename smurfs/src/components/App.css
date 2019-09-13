@@ -35,3 +35,29 @@
 form {
   margin: 40px;
 }
+
+.smurfTurf {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+body {
+  color: white;
+
+}
+
+#root {
+  background-color: aquamarine;
+  background-size: cover;
+}
+
+#root>div>div:nth-child(4)>button {
+  /* Get your Smurf Button */
+  margin: 10px;
+}
+
+#root>div>div:nth-child(5)>form>button {
+  /* form button */
+  margin: 15px;
+}
