@@ -23,10 +23,24 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+
+1. Context provides a way to share values like these between components without having to explicitly pass a prop through every level of the tree.
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+2. Actions are objects that return a packet of information that gets sent to the reducer function telling it what event has been created in the UI and how that event should be handled. The type explaines what event happened, the payload is the extra information telling the reducer how to update the state for that event. The store is known as the single source of truth because all of the data is centralized in one location and managed by redux.
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+3. Your application state is global, and your component state is local. That means any component, anywhere in the app can access it (kind of like a database) so long as they hook into it. Component state however, lives within that specific component. As such, it can only be updated within that component and passed down to its children via props. Using Application state is good to use when you have multiple components all through out your application that need the same data, component state is best used when your data is only needed by that component storing.
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+4. Redux Thunk is a middleware, and middleware is used to intercept processes, evaluate them then pass them on with an action. Redux-thunk allows us to perform asynchrounous operations inside our action creators before passing them to the reducer function. It changes our actions creators by allowing our action creator become an evaluator of the data coming to it. When an action creator is called, redux-thunk will intercept and look at what is returned. If the thing returned is an action, it will forward the action through to the reducer. But, if the thing returned is a function, aka a thunk (a function returned from a function), then it will invoke that function and pass in the dispatch function as an argument to it.
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+5. I like the context API because you can place data anywhere you want without having to pass props. But I understand it makes components harder to reuse.
 
 ## Project Set Up
 
@@ -61,9 +75,9 @@ Follow these steps to set up your project:
 ```js
 [
   {
-    name: "Brainey",
+    name: 'Brainey',
     age: 200,
-    height: "5cm",
+    height: '5cm',
     id: 0
   }
 ];
@@ -94,15 +108,15 @@ Example of object created in Smurf DB:
 ```js
 [
   {
-    name: "Brainey",
+    name: 'Brainey',
     age: 200,
-    height: "5cm",
+    height: '5cm',
     id: 0
   },
   {
-    name: "Sleepy",
+    name: 'Sleepy',
     age: 200,
-    height: "5cm",
+    height: '5cm',
     id: 1
   }
 ];
@@ -154,9 +168,9 @@ Example:
 ```js
 output: [
   {
-    name: "Sleepy",
+    name: 'Sleepy',
     age: 200,
-    height: "5cm",
+    height: '5cm',
     id: 1
   }
 ];
